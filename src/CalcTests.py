@@ -34,5 +34,12 @@ class KnownValues(unittest.TestCase):
             result = round(calculator.divide(int(row['Value 2']),int(row['Value 1'])),7)
             self.assertEqual(result, round(float(row['Result']),7))
 
+
+    def test_squareroot_csv(self):
+        test_sqroot= CsvReader('src/root.csv').data
+        for row in test_sqroot:
+            result = round(calculator.root(int(row['Value 1'])),8)
+            self.assertEqual(result, round(float(row['Result']),8))
+
 if __name__== '__main__':
     unittest.main()
