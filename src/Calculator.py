@@ -1,10 +1,10 @@
 import math
 
 def addition(x,y):
-    return x+y 
+    return x+y
 
 def square(x):
-    return  x*x
+    return  x*x 
 
 def subtraction(x,y):
     return y-x
