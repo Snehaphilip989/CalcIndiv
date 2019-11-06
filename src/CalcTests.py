@@ -21,5 +21,11 @@ class KnownValues(unittest.TestCase):
         for row in test_sub:
             self.assertEqual(calculator.subtract(int(row['Value 1']),int(row['Value 2'])), int(row['Result']))
 
+
+    def test_multiplication_csv(self):
+        test_mul= CsvReader('src/multiplication.csv').data
+        for row in test_mul:
+            self.assertEqual(calculator.multiply(int(row['Value 1']),int(row['Value 2'])), int(row['Result']))
+
 if __name__== '__main__':
     unittest.main()
