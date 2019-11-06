@@ -21,16 +21,16 @@ class KnownValues(unittest.TestCase):
         for row in test_sq:
             self.assertEqual(calculator.square(int(row['Value 1'])), int(row['Result']))
 
+
+    def test_multiplication_csv(self):
+        test_mul= CsvReader('src/multiplication.csv').data
+        for row in test_mul:
+            self.assertEqual(calculator.multiply(int(row['Value 1']),int(row['Value 2'])), int(row['Result']))
+
     def test_subtraction_csv(self):
         test_sub= CsvReader('src/subtraction.csv').data
         for row in test_sub:
             self.assertEqual(calculator.subtract(int(row['Value 1']),int(row['Value 2'])), int(row['Result']))
-
-
-    def test_multiplication_csv(self):
-        test_mul= CsvReader('src/multiplication.csv').data 
-        for row in test_mul:
-            self.assertEqual(calculator.multiply(int(row['Value 1']),int(row['Value 2'])), int(row['Result']))
 
 
     def test_division_csv(self):
