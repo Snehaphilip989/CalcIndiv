@@ -27,5 +27,12 @@ class KnownValues(unittest.TestCase):
         for row in test_mul:
             self.assertEqual(calculator.multiply(int(row['Value 1']),int(row['Value 2'])), int(row['Result']))
 
+
+    def test_division_csv(self):
+        test_div= CsvReader('src/division.csv').data
+        for row in test_div:
+            result = round(calculator.divide(int(row['Value 2']),int(row['Value 1'])),7)
+            self.assertEqual(result, round(float(row['Result']),7))
+
 if __name__== '__main__':
     unittest.main()
