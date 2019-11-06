@@ -12,6 +12,11 @@ def multiplication(x,y):
 def division(x,y):
     return float(x)/float(y)
 
+
+def squareroot(x):
+    return  math.sqrt(x)
+
+
 class Calculator:
     rest=0
 
@@ -33,4 +38,8 @@ class Calculator:
 
     def divide(self, x, y):
         self.result = division(x,y)
+        return self.result
+
+    def root(self,x):
+        self.result = squareroot(x)
         return self.result
