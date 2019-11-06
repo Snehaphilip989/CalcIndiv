@@ -3,6 +3,9 @@ import math
 def addition(x,y):
     return x+y
 
+def square(x):
+    return  x*x
+
 def subtraction(x,y):
     return y-x
 
@@ -12,9 +15,9 @@ def multiplication(x,y):
 def division(x,y):
     return float(x)/float(y)
 
-
 def squareroot(x):
     return  math.sqrt(x)
+
 
 
 class Calculator:
@@ -25,6 +28,11 @@ class Calculator:
 
     def add(self, x, y):
         self.result = addition(x,y)
+        return self.result
+
+
+    def square(self,x):
+        self.result = square(x)
         return self.result
 
 
