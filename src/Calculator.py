@@ -9,6 +9,9 @@ def subtraction(x,y):
 def multiplication(x,y):
     return x*y
 
+def division(x,y):
+    return float(x)/float(y)
+
 class Calculator:
     rest=0
 
@@ -26,4 +29,8 @@ class Calculator:
 
     def multiply(self, x, y):
         self.result = multiplication(x,y)
+        return self.result
+
+    def divide(self, x, y):
+        self.result = division(x,y)
         return self.result
